@@ -1,0 +1,103 @@
+/* :root{
+    --boxColor:#0ff7;
+    --rotateSpeed: 30s;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #aaa;
+    perspective: 500px;
+} */
+
+/* .scene{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: sceneRotate var(--rotateSpeed) infinite linear;
+} */
+
+/* @keyframes sceneRotate {
+    to{transform: rotateY(360deg);}
+} */
+
+.tree{
+    width: 3em;height: 9em;
+    transform-style: preserve-3d;
+    position: relative;
+    /* transform: rotateX(45deg); */
+    background: var(--boxColor);
+    animation: roll var(--rotateSpeed) linear infinite forwards;
+    transition: 1s ease-in-out;
+}
+
+/* @keyframes roll {
+    from{transform: rotateX(-180deg) rotateY(-80deg)}
+    to{transform: rotateX(180deg) rotateY(80deg) rotateZ(-180deg)}
+} */
+
+.circle{
+    width: 3em;height: 3em;
+    position: absolute;left: 50%;
+    transform: translateX(-50%) rotateX(90deg);
+    border-radius: 100%;border: 2px solid red;
+    border-top-color: red;
+    border-left-color: hotpink;
+    border-bottom-color: indigo;
+    border-right-color: khaki;
+    background: green;
+    box-shadow: 0 0 0.5em #000a inset;
+}
+
+.c1{top:0%;width: 1em;height: 1em;background: transparent;}
+.c2{top:10%;width: 2em;height: 2em;}
+.c3{top:20%;width: 3em;height: 3em;}
+.c4{top:30%;width: 4em;height: 4em;}
+.c5{top:40%;width: 5em;height: 5em;}
+.c6{top:50%;width: 6em;height: 6em;}
+.c7{top:60%;width: 7em;height: 7em;}
+.c8{top:70%;width: 8em;height: 8em;}
+.c9{top:80%;width: 9em;height: 9em;}
+.c10{top:90%;width: 10em;height: 10em;}
+
+
+.cylinder{
+    width: .5em;height: 900%;
+    transform-style: preserve-3d;
+    position: relative;left: 50%;top: 0;
+    transform: translateX(-50%);
+    background: var(--boxColor);
+    border-top-left-radius: 50% ;
+    border-top-right-radius: 50%;
+}
+
+.rectangle{
+    width: 100%;height: 100%;
+    position: absolute;left: 0;top: 0;
+    background: var(--boxColor);
+    border: 4px solid var(--boxColor);
+    border-top-left-radius: 50% ;
+    border-top-right-radius: 50%;
+}
+
+.cyncircle{
+    width: .5em;height: .5em;
+    position: absolute;left: 50%;
+    transform: translateX(-50%) rotateX(90deg);
+    border-radius: 100%;
+    background: black;
+    box-shadow: 0 0 0.5em #000a inset;
+}
+
+/* ===== Tree Size =====*/
+.ctop{top: -2%;}
+.cbottom{bottom: -2%;}
+

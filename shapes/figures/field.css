@@ -1,0 +1,62 @@
+*{margin:0px;padding:0px;box-sizing:border-box;}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ccc;
+    perspective: 300px;
+}
+
+/* =====SCENE START===== */
+.scene{
+    position: relative;
+    width:100%;
+    height: 100%;
+    border-bottom: 8px solid #175117;
+    background: dimgray;
+    animation: sceneRotate var(--rotateSpeed) infinite linear forwards;
+}
+
+@keyframes sceneRotate {to{transform: rotateY(360deg);}}
+
+
+
+/* =====GROUND START===== */
+.ground{
+    position:absolute;left: 50%;top:50%;
+    transform: translate(-50%,-50%)   ;
+    width: 90%;height: 90%;
+    background: transparent;
+}
+
+/* =====grass start===== */
+.grass{
+    position: absolute;
+    transform: perspective(300px) rotateX(70deg);
+    border: none;outline: none;
+    height: 100%;width: 100%;
+    background: seagreen;
+}
+
+/* =====grass end===== */
+
+
+/* =====TREES START===== */
+.tree{
+    position: absolute;top: 50%;left: 50%;
+    transform: translate(-50%,-50%) rotate(315deg);
+    width: 120px;height: 120px;
+    background: #94ab38;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+}
+.tree::before{
+    content: '';
+    position: absolute;top: 85px;left: -20px;
+    width: 10px;height: 100px;
+    background: #3c2703;
+    transform: rotate(45deg);
+}
